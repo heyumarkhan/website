@@ -40,26 +40,38 @@
                     <p class="pt-5">Here is the short story about me:</p>
                     <h2>So, after I wrapped up my degree in Management & Technology, I jumped headfirst into the world of product management. I’ve had the chance to work with three SaaS startups, and let me tell you, it’s been a wild ride!</h2>
 
-                    <container class="d-flex justify-content-center align-items-center">
-                        <div class="row py-5">
-                            <div class="col-4">
-                                <img src="https://socialbu.com/images/redesign/logo.svg" alt="SocialBu | Social Media Management & Automation Platform" class="img-fluid" data-bs-toggle="tooltip" data-bs-title="SocialBu.com | A Social Media Management & Automation Platform">
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <div class="row py-5 px-5 w-100">
+                            <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-4 mb-sm-0">
+                                <img src="https://socialbu.com/images/redesign/logo.svg"
+                                     alt="SocialBu | Social Media Management & Automation Platform"
+                                     class="img-fluid company-logo"
+                                     data-bs-toggle="tooltip"
+                                     data-bs-title="SocialBu.com | A Social Media Management & Automation Platform">
                             </div>
-                            <div class="col-4">
-                                <img src="/chatfai.png" alt="ChatFai | Create and talk with any AI character" class="img-fluid" style="height: 40px;" data-bs-toggle="tooltip" data-bs-title="ChatFai.com | Create and talk with any AI character">
+                            <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center mb-4 mb-sm-0">
+                                <img src="/chatfai.png"
+                                     alt="ChatFai | Create and talk with any AI character"
+                                     class="img-fluid company-logo"
+                                     data-bs-toggle="tooltip"
+                                     data-bs-title="ChatFai.com | Create and talk with any AI character">
                             </div>
-                            <div class="col-4">
-                                <img src="https://cdn-ilapcjl.nitrocdn.com/GkolcZihdLFvxuxRqiNfaoaWqRPwGRHv/assets/images/source/linkmngr.com/wp-content/uploads/2021/05/Updated-logo.svg" alt="LinkMngr | Simple branded link shortener" class="img-fluid" style="height: 35px;" data-bs-toggle="tooltip" data-bs-title="LinkMngr.com | Simple branded link shortener">
+                            <div class="col-12 col-sm-4 d-flex justify-content-center align-items-center">
+                                <img src="https://cdn-ilapcjl.nitrocdn.com/GkolcZihdLFvxuxRqiNfaoaWqRPwGRHv/assets/images/source/linkmngr.com/wp-content/uploads/2021/05/Updated-logo.svg"
+                                     alt="LinkMngr | Simple branded link shortener"
+                                     class="img-fluid company-logo"
+                                     data-bs-toggle="tooltip"
+                                     data-bs-title="LinkMngr.com | Simple branded link shortener">
                             </div>
                         </div>
-                    </container>
+                    </div>
                         
                     <!-- <h2 class="pt-5"> Along the way, I found myself more interested in what users want and how they interact with our products than in the products themselves. It’s all about making their lives easier!</h2>
                     
                     <p class="pt-5">Some recent projects:</p> -->
                     <div class="container pt-2">
                         <h3 class="pt-2 text-start">SocialBu</h3>
-                        <p class="pt-2 text-start">As a product manager at SocialBu, I successfully completed multiple product cycles, overseeing everything from initial concept pitches to final delivery. My focus on user feedback and agile methodologies ensured that we consistently delivered high-quality features that met our users’ needs.</p>
+                        <p class="pt-2 text-start">As a product manager at <a href="https://socialbu.com/" target="_blank">SocialBu.com</a>, I successfully completed multiple product cycles, overseeing everything from initial concept pitches to final delivery. My focus on user feedback and agile methodologies ensured that we consistently delivered high-quality features that met our users’ needs.</p>
                         <!-- Adding SocialBu Projects -->
                         <div id="socialbu-projects"></div>
                     </div>
@@ -67,15 +79,13 @@
                     <!-- ChatFai                     -->
                     <div class="container">
                         <h3 class="pt-5 text-start">ChatFai</h3>
-                        <p class="pt-2 text-start">So, I led a design system implementation for ChatFAI, and it’s been a game changer! Plus, I dove into Reddit to boost our organic growth, and it’s really paid off.
+                        <p class="pt-2 text-start">So, I led a design system implementation for <a href="https://chatfai.com/" target="_blank">ChatFai.com</a>, and it’s been a game changer! Plus, I dove into Reddit to boost our organic growth, and it’s really paid off.
                         </p>
-                        <!-- Adding ChatFai Projects -->
-                        <!-- <div id="chatfai-projects"></div> -->
                     </div>
 
                     <div class="container">
                         <h3 class="pt-2 text-start">LinkMngr</h3>
-                        <p class="pt-2 text-start">Think of a mini web page just for sharing links! I worked on the bio pages feature for LinkMngr, which lets users pick from different styles to stand out online.
+                        <p class="pt-2 text-start">Think of a mini web page just for sharing links! I worked on the bio pages feature for <a href="https://linkmngr.com/" target="_blank">LinkMngr.com</a>, which lets users pick from different styles to stand out online.
                         </p>
                     </div>
 
@@ -91,15 +101,6 @@
               document.getElementById('socialbu-projects').innerHTML = data;
             })
             .catch(error => console.error('Error loading reviews:', error));
-
-        //     // JavaScript to load ChatFai projects
-        
-        //   fetch('ChatFaiProjects.html')
-        //     .then(response => response.text())
-        //     .then(data => {
-        //       document.getElementById('chatfai-projects').innerHTML = data;
-        //     })
-        //     .catch(error => console.error('Error loading reviews:', error));
 
         // JavaScript to load Footer
           fetch('footer.html')
