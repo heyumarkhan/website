@@ -1,0 +1,206 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+.container{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 33% 67%;
+}
+
+.review-card {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: left;
+    padding: 15px;
+    p{
+        margin: 0px;
+    }
+}
+
+.reviwer-details{
+    padding-top: 10px;
+    color: grey;
+    h4, p {
+        margin: 0px;
+    }
+}
+
+
+
+/*Column1 styles start here*/
+.column1{
+    float: left;
+    text-align: center;
+    border: 1px black solid;
+}
+
+.col-1-personal-info{
+    border-bottom: 2px solid black ;
+    padding: 20px;
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+}
+
+ul{
+    text-align: center;
+    padding-left: 0px;
+    margin: 0px;
+}
+.col-1-profile-nav li{
+    display: inline;
+}
+
+.col-1-projects-block li{
+    vertical-align: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    background-color: rgb(225, 237, 250);
+}
+
+.col-1-projects-block h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px 10px 10px 10px;
+}
+.col-1-experience-block h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid black;
+    padding: 10px 10px 10px 10px;
+}
+
+.col-1-experience-block li{
+    text-align: left;
+    margin:0 px;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 1px solid black;
+    background-color: rgb(225, 237, 250);
+    p{
+        margin-top: 0px;
+    }
+}
+
+.col-1-Education-block h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.col-1-Education-block p{
+    text-align: left;
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+}
+
+.col-1-Reviews h3{
+    text-align: left;
+    padding-left: 15px;
+
+}
+
+
+/*       Column2 styles start here      */
+
+.column2{
+    border: 1px solid black;
+}
+
+
+
+/* Nav Bar Styles */
+.col-2-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    .col-2-logo{
+        display: flex;
+        align-items: center;
+        h3{
+            padding-left: 0.5rem;
+        }
+        img{
+            width: 35px;
+            height: 35px;
+        }
+    }
+    ul{
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Hero section styles */
+.hero-section{
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 5rem 3rem 5rem 3rem;
+    border-bottom: 1px solid black ;
+}
+
+/* Main information Section */
+
+.main-info{
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    text-align: left;
+    .projects{
+        border: 1px solid black;
+        h4{
+            padding-left: 15px;
+        }
+        ul{
+            padding-top: 15px;        }
+        li{
+            padding: 5px 0px 5px 15px;
+            text-align: left;
+            border-bottom: 1px solid black ;
+            align-items: center;
+        }
+        
+    }
+    .work-experience{
+        border: 1px solid black;
+        h4{
+            padding-left: 15px;
+        }
+        li {
+            padding: 5px 0px 5px 15px;
+            text-align: left;
+            border-bottom: 1px solid black ;
+            align-items: center;
+        }
+    }
+    .education{
+        border: 1px solid black;
+        padding-top: 15px;
+        padding-left: 15px;
+
+        li {
+            padding: 5px 0px 5px 0px;
+            text-align: left;
+            align-items: center;
+            list-style-type: '- ';
+            list-style-position: inside;
+        }
+    }
+}
+
+.reviews-section h3{
+    padding-left: 25px;
+}
+.col-2-review-cards{
+    display: flex;
+}
+
+.copyright-section{
+    padding: auto;
+    text-align: center;
+}
