@@ -1,0 +1,40 @@
+.nav{
+    margin: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tooltip{
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+.tooltiptext{
+    visibility: hidden;
+    text-align: center;
+    color: white;
+    background-color: rgb(48, 45, 45);
+    width: auto;
+    padding: 10px 6px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+.tooltiptext::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  rgb(48, 45, 45) transparent transparent transparent;
+}
