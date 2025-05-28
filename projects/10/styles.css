@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 20%;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+li{
+    list-style-type: none;
+    padding: 0px 20px;
+}
+
+.centeral-content{
+    background-color: black;
+    padding: 40px 30px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    padding: 20px;
+}
+
+.active-tab{
+    text-decoration: underline;
+    font-weight: 600;
+    color: black;
+}
+
+.active-content{
+    display: visible;
+}
+
+.inactive-content{
+    display: none;
+}
