@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 8px 16px;
+}
+
+.active{
+    display: visible;
+}
+
+.inactive{
+    display: none;
+}
