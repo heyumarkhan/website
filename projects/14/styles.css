@@ -1,0 +1,25 @@
+body{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3, p{
+    text-align: center;
+}
+
+#date-picker{
+    margin: 5px 0px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#calculate-button{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
