@@ -53,12 +53,37 @@ header .container {
 }
 
 .logo a {
-    font-family: var(--font-serif);
-    font-size: 2.2em;
-    font-weight: 700;
-    color: var(--primary-green);
-    text-decoration: none;
-    letter-spacing: 1px;
+    display: flex; /* Helps in centering or aligning the image if needed */
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
+    height: 100%; /* Ensure the anchor takes full height if in a flex container */
+
+}
+
+.logo img {
+    max-width: 100%; /* Ensures the image is responsive and shrinks within its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below the image */
+    max-height: 80px; /* Adjust this value as needed for your desktop logo height */
+    /* You might need to adjust this value based on your header's height */
+}
+
+@media (max-width: 768px) {
+    /* Header changes for mobile - keep these as they are for the container */
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        max-height: 60px; /* Adjust logo height for tablets and smaller desktops */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 40px; /* Adjust logo height for mobile phones */
+    }
 }
 
 nav ul {
@@ -510,5 +535,34 @@ footer {
     }
     .service-content h3 {
         font-size: 1.8em;
+    }
+}
+
+
+/* Footer Logo */
+.footer-logo {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically (if .footer-logo has a height) */
+    width: 100%; /* Ensure it takes full width for centering */
+    margin-bottom: 20px; /* Space between logo and CTA section */
+}
+
+.footer-logo img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 100px; /* Adjust this value to control the logo's height in the footer */
+    display: block; /* Removes extra space below the image */
+}
+
+@media (max-width: 768px) {
+    .footer-logo img {
+        max-height: 80px; /* Smaller logo on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo img {
+        max-height: 60px; /* Even smaller logo on mobile */
     }
 }
