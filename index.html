@@ -312,9 +312,7 @@
             </div>
           </div>
           <div class="engine-footer">
-            <a
-              id="engine-contact"
-              href="mailto:studio@heyumar.com?subject=Let%E2%80%99s%20plan%20a%20product%20launch"
+            <a id="engine-contact" href="#project-form"
               >Plan a campaign <span aria-hidden="true">↗</span></a
             >
           </div>
@@ -461,16 +459,14 @@
         id="contact"
         aria-labelledby="contact-title"
       >
-        <a
-          class="contact-headline"
-          href="mailto:studio@heyumar.com?subject=Hey%20Umar%2C%20let%E2%80%99s%20make%20something"
-          ><h2 id="contact-title">Let’s make<br /><span>it matter.</span></h2>
-          <span class="contact-arrow" aria-hidden="true">↗</span></a
-        >
+        <div class="contact-headline">
+          <h2 id="contact-title">Let’s make<br /><span>it matter.</span></h2>
+          <span class="contact-arrow" aria-hidden="true">↘</span>
+        </div>
         <div class="contact-bottom">
           <p>
-            Tell us what you’re building. Let’s find the right way to tell its
-            story.
+            A few details. A better first conversation. Tell us where you want
+            to go, and we’ll reply with the next step.
           </p>
           <div class="email-actions">
             <a href="mailto:studio@heyumar.com" class="email-link"
@@ -483,6 +479,108 @@
             ><span class="copy-status" id="copy-status" role="status"></span>
           </div>
         </div>
+        <form
+          id="project-form"
+          name="project-inquiry"
+          method="POST"
+          action="/thank-you.html"
+          data-netlify="true"
+          netlify-honeypot="website-check"
+          class="project-form"
+        >
+          <input type="hidden" name="form-name" value="project-inquiry" />
+          <p hidden>
+            <label
+              >Leave this empty
+              <input name="website-check" tabindex="-1" autocomplete="off"
+            /></label>
+          </p>
+          <div class="form-field">
+            <label for="inquiry-name">Your name</label>
+            <input
+              id="inquiry-name"
+              name="name"
+              autocomplete="name"
+              required
+              maxlength="100"
+              placeholder="Alex Morgan"
+            />
+          </div>
+          <div class="form-field">
+            <label for="inquiry-email">Email</label>
+            <input
+              id="inquiry-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              maxlength="254"
+              placeholder="alex@yourbrand.com"
+            />
+          </div>
+          <div class="form-field">
+            <label for="inquiry-service">What do you need?</label>
+            <select id="inquiry-service" name="service" required>
+              <option value="" disabled selected>Select a focus</option>
+              <option>AI video &amp; motion</option>
+              <option>Brand images &amp; design</option>
+              <option>Content strategy &amp; writing</option>
+              <option>Social content &amp; campaigns</option>
+              <option>A mix / help me decide</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="inquiry-budget">Budget range <span>(USD)</span></label>
+            <select id="inquiry-budget" name="budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option>Under $500</option>
+              <option>$500–$1,500</option>
+              <option>$1,500–$5,000</option>
+              <option>$5,000–$10,000</option>
+              <option>$10,000+</option>
+              <option>Help me scope it</option>
+            </select>
+          </div>
+          <div class="form-field form-wide">
+            <label for="inquiry-brief">What would you like to achieve?</label>
+            <p id="brief-hint">
+              Your brand, what you want to create, and what a great result looks
+              like. Add a deadline if you have one.
+            </p>
+            <textarea
+              id="inquiry-brief"
+              name="brief"
+              rows="4"
+              required
+              maxlength="5000"
+              aria-describedby="brief-hint"
+              placeholder="We’re launching… We’d love to…"
+            ></textarea>
+          </div>
+          <div class="form-field form-wide">
+            <label for="inquiry-direction"
+              >Creative direction <span>(optional)</span></label
+            >
+            <select id="inquiry-direction" name="creative-direction">
+              <option value="" selected>How much should we explore?</option>
+              <option>We have a clear direction to follow</option>
+              <option>We have a starting point — let’s build on it</option>
+              <option>Open brief — surprise us</option>
+            </select>
+          </div>
+          <div class="form-wide form-submit">
+            <button type="submit" class="button inquiry-submit">
+              Send project brief <span aria-hidden="true">↗</span>
+            </button>
+            <p>Your details are used to respond to your inquiry.</p>
+          </div>
+          <p
+            id="form-status"
+            class="form-wide form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
       </section>
     </main>
     <footer class="site-footer">

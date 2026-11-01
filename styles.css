@@ -949,6 +949,87 @@ details[open] summary {
   max-width: 420px;
   line-height: 1.6;
 }
+.project-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin-top: 42px;
+  scroll-margin-top: 110px;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.form-field label {
+  font-size: 19px;
+  font-weight: 500;
+}
+.form-field label span {
+  font-weight: 400;
+  color: #3f4e22;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #586c32;
+  border-radius: 8px;
+  background: #f8fbe9;
+  color: #182308;
+  padding: 15px;
+  font: inherit;
+  font-size: 17px;
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #64704b;
+  opacity: 1;
+}
+.form-field :is(input, select, textarea):focus-visible {
+  outline: 3px solid #182308;
+  outline-offset: 3px;
+}
+.form-field p,
+.form-submit p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3f4e22;
+  margin: 0;
+}
+.form-wide {
+  grid-column: 1 / -1;
+}
+.form-submit {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.inquiry-submit {
+  background: #182308;
+  color: #f8fbe9;
+  border: 0;
+  cursor: pointer;
+}
+.inquiry-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.form-status {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.form-status:empty {
+  display: none;
+}
 .email-actions {
   display: flex;
   align-items: center;
@@ -1375,6 +1456,7 @@ dialog::backdrop {
   }
   .hero-art {
     position: relative;
+    display: none;
     width: 110%;
     right: auto;
     top: auto;
@@ -1382,6 +1464,7 @@ dialog::backdrop {
     margin: 0 -5%;
   }
   .orb-control {
+    display: none;
     bottom: 7%;
     right: 50%;
     transform: translateX(50%);
@@ -1659,6 +1742,21 @@ dialog::backdrop {
   }
   .copy-status {
     font-size: 14px;
+  }
+}
+@media (max-width: 760px) {
+  .project-form {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .form-submit {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .inquiry-submit {
+    justify-content: space-between;
   }
 }
 @media (max-width: 390px) {

@@ -185,8 +185,7 @@
         return card;
       }),
     );
-    document.querySelector("#engine-contact").href =
-      `mailto:studio@heyumar.com?subject=${encodeURIComponent(goal.subject)}`;
+    document.querySelector("#engine-contact").href = "#project-form";
   }
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => selectGoal(tab));
@@ -274,6 +273,32 @@
       status.textContent = "";
     }, 5000);
   });
+  const inquiryForm = document.querySelector("#project-form");
+  inquiryForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const button = inquiryForm.querySelector('[type="submit"]');
+    const status = document.querySelector("#form-status");
+    button.disabled = true;
+    status.textContent = "Sending your brief…";
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(inquiryForm)).toString(),
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      inquiryForm.reset();
+      status.textContent =
+        "Brief received. Thank you! We’ll reply to your email with the next step.";
+    } catch {
+      status.textContent =
+        "Your brief wasn’t sent. Please try again. Your answers are still here.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+  /* Skip the sculpture entirely on mobile, including WebGL initialization. */
+  if (window.matchMedia("(max-width: 760px)").matches) return;
   /* Real-time raymarched chrome; a CSS sculpture remains as a no-WebGL fallback. */
   const canvas = document.querySelector("#orb-canvas"),
     art = document.querySelector("#hero-art"),
@@ -401,7 +426,13 @@
     requestAnimationFrame(frame);
     const delta = Math.min((time - lastTime) / 1000, 0.05);
     lastTime = time;
-    if (document.hidden || !orbVisible || gl.isContextLost()) return;
+    if (
+      document.hidden ||
+      !orbVisible ||
+      window.innerWidth <= 760 ||
+      gl.isContextLost()
+    )
+      return;
     if (!paused) elapsed += delta;
     if (paused && material === lastMaterial && !needsDraw) return;
     if (time - lastDraw < 33) return;
