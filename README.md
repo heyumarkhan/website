@@ -14,7 +14,7 @@ Run `python -m http.server 4173` in this directory, then visit `http://localhost
 - Honors reduced-motion preferences and provides a motion pause control. The sculpture pauses offscreen and while the page is hidden.
 - Local font and portrait assets, semantic landmarks, social sharing metadata, and SVG favicon.
 
-Contact links use Umar’s existing public address, `itsumarkhan1@gmail.com`. Campaign blueprints are illustrative, not an AI generation service or a lead submission form. No backend, analytics, or tracking is introduced.
+Contact links use the agency mailbox, `studio@heyumar.com`. Campaign blueprints are illustrative, not an AI generation service or a lead submission form. No backend, analytics, or tracking is introduced.
 
 The existing `projects/` pages and portfolio assets remain in place. Only the homepage has been redesigned.
 

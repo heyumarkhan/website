@@ -186,7 +186,7 @@
       }),
     );
     document.querySelector("#engine-contact").href =
-      `mailto:itsumarkhan1@gmail.com?subject=${encodeURIComponent(goal.subject)}`;
+      `mailto:studio@heyumar.com?subject=${encodeURIComponent(goal.subject)}`;
   }
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => selectGoal(tab));
@@ -265,7 +265,7 @@
   document.querySelector("#copy-email").addEventListener("click", async () => {
     const status = document.querySelector("#copy-status");
     try {
-      await navigator.clipboard.writeText("itsumarkhan1@gmail.com");
+      await navigator.clipboard.writeText("studio@heyumar.com");
       status.textContent = "Email copied. Say hey!";
     } catch {
       status.textContent = "Select the email address to copy it.";
