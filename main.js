@@ -11,7 +11,7 @@
     paused = value;
     document.documentElement.classList.toggle("motion-paused", paused);
     motionButton.setAttribute("aria-pressed", String(paused));
-    motionButton.textContent = paused ? "RESUME MOTION ▷" : "PAUSE MOTION Ⅱ";
+    motionButton.textContent = paused ? "Resume motion ▷" : "Pause motion Ⅱ";
   };
   setMotion(paused);
   motionButton.addEventListener("click", () => setMotion(!paused));
@@ -175,16 +175,13 @@
       .setAttribute("aria-labelledby", tab.id);
     document.querySelector("#engine-idea").textContent = goal.idea;
     document.querySelector("#engine-outputs").replaceChildren(
-      ...goal.outputs.map((output, index) => {
+      ...goal.outputs.map((output) => {
         const card = document.createElement("div"),
-          label = document.createElement("span"),
           title = document.createElement("h4"),
           description = document.createElement("p");
-        label.className = "mono";
-        label.textContent = `0${index + 1} / ${output[0]}`;
         title.textContent = output[1];
         description.textContent = output[2];
-        card.append(label, title, description);
+        card.append(title, description);
         return card;
       }),
     );
@@ -283,11 +280,7 @@
     control = document.querySelector("#orb-control");
   control.addEventListener("click", () => {
     material = (material + 1) % 3;
-    document.querySelector("#orb-label").textContent = [
-      "CHANGE THE ENERGY",
-      "A DIFFERENT FREQUENCY",
-      "BACK TO THE FUTURE",
-    ][material];
+    document.querySelector("#orb-label").textContent = "Change color";
     control.setAttribute(
       "aria-label",
       `Change sculpture material to ${["iridescent", "electric green", "chrome"][material]}`,
