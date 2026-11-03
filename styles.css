@@ -1179,6 +1179,124 @@ dialog::backdrop {
 .dialog-cta {
   margin-top: 27px;
 }
+.food-portfolio {
+  background: #f2eadd;
+  color: #30241c;
+}
+.food-heading {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+.food-eyebrow {
+  color: #79513b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.food-heading h2 {
+  font-size: clamp(40px, 4.8vw, 72px);
+}
+.food-heading h2 em {
+  color: #8b492e;
+  font-style: normal;
+}
+.food-intro {
+  max-width: 395px;
+  color: #65564a;
+  font-size: 18px;
+  line-height: 1.65;
+  justify-self: end;
+}
+.food-films {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.food-player {
+  background: #30241c;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.food-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food-player video:focus-visible {
+  outline: 3px solid #f2eadd;
+  outline-offset: -5px;
+}
+.food-film-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  color: #79513b;
+  font-size: 12px;
+  margin: 20px 0 8px;
+}
+.food-film h3 {
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+.food-film > p {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #65564a;
+  max-width: 350px;
+}
+.food-bottom {
+  border-top: 1px solid #d3c6b5;
+  margin-top: 40px;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+.food-disclosure {
+  max-width: 470px;
+  color: #65564a;
+  font-size: 14px;
+}
+.food-cta {
+  background: #30241c;
+  color: #f2eadd;
+  flex-shrink: 0;
+}
+.food-cta:hover {
+  background: #8b492e;
+}
+.food-portfolio a:focus-visible {
+  outline-color: #8b492e;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  .site-header nav { gap: 18px; }
+  .site-header nav a { font-size: 14px; }
+  .food-heading { gap: 32px; }
+  .food-films { gap: 18px; }
+  .food-bottom { align-items: flex-start; }
+  .food-cta { gap: 18px; padding-inline: 16px; }
+}
+@media (max-width: 760px) {
+  .food-heading { grid-template-columns: 1fr; gap: 24px; margin-bottom: 30px; }
+  .food-heading h2 { font-size: clamp(38px, 8.5vw, 60px); }
+  .food-intro { justify-self: start; max-width: 480px; }
+  .food-films { grid-template-columns: 1fr; gap: 36px; max-width: 440px; margin-inline: auto; }
+  .food-film h3 { font-size: 28px; }
+  .food-film > p { max-width: none; }
+  .food-bottom { flex-direction: column; align-items: flex-start; }
+  .food-cta { max-width: 100%; gap: 18px; }
+}
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal {
     opacity: 0;

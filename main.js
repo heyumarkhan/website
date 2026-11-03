@@ -16,6 +16,31 @@
   setMotion(paused);
   motionButton.addEventListener("click", () => setMotion(!paused));
   reducedMotion.addEventListener("change", (event) => setMotion(event.matches));
+  const foodVideos = [...document.querySelectorAll(".food-player video")];
+  foodVideos.forEach((video) => {
+    video.addEventListener("play", () => {
+      foodVideos.forEach((other) => {
+        if (other !== video) other.pause();
+      });
+    });
+  });
+  // Native controls remain usable without JavaScript. Never autoplay the films.
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) foodVideos.forEach((video) => video.pause());
+  });
+  const filmObserver = "IntersectionObserver" in window
+    ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) entry.target.pause();
+        });
+      })
+    : null;
+  if (filmObserver) foodVideos.forEach((video) => filmObserver.observe(video));
+  document.querySelectorAll("[data-food-inquiry]").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.querySelector("#inquiry-service").value = "Bakery & café videos";
+    });
+  });
   document.querySelector("#year").textContent = String(
     new Date().getFullYear(),
   );
